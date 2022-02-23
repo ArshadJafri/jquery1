@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Registration Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#register").click(function(){
+				var name= $("#name").val();
+				var gender = $("input[name='gender']:checked").val();
+				var location= $("#location").val();
+				var email= $("#email").val();
+				var password= $("#password").val();
+				$("#registered").text("Customer Registered...!");
+				$("#deatils").text("Customer Details"+"");
+				$("#name1").text("Customer's name: "+name);
+				$("#gender1").text("Gender:         "+gender);
+				$("#location1").text("Location:     "+location);
+				$("#email1").text("Email Id:        "+email);
+			});
+		});
+	</script>
+	<style>
+		table,td {
+			font-family:sans-serif;
+			width:100%;
+			font-weight: bold;
+		}
+		body{
+			background-image: url("https://www.five9.com/assets/img/covid-19/hero-image.png");
+		}
+		p{
+			padding-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;font-family: sans-serif;padding-top: 20px">Customer Registration</h1>
+	<form name="frm1">
+	<table style="width:25%;margin-left: 500px;margin-top: 40px">
+		<tr>
+			<td>Customer Name:</td>
+			<td><input type="text" id="name" name="name" /></td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td style="background-color: white">
+				<input type="radio" id="male" name="gender" value="Male"/>
+				<label for="male" id="male">Male</label>				
+				<input type="radio" id="female" name="gender" value="Female">
+				<label for="female">Female</label>
+			</td>
+		</tr>
+		<tr>
+			<td>Location:</td>
+			<td><input type="text" id="location" name="email"></td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td><input type="email" id="email" name="email"></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="password" id="password" name="password"></td>
+		</tr>
+		<tr>
+			<td style="padding-left: 120px"><input type="button" value="Register Customer" id="register" style="background-color: green;color: white"></td>
+		</tr>
+		<tr>
+			<td style="padding-left: 140px"><input type="reset" value="Clear All" style="background-color: red;color: white"></td>
+		</tr>
+	</table>
+	<br ><br ><br><br ><br >
+	<table style="width:25%;margin-left: 500px;background-color: gray;color: white;">
+		<tr>
+			<td><p id="registered"></p></td>
+		</tr>
+		<tr>
+			<td><p id="name1"></p><td>
+		</tr>
+		<tr>	
+			<td><p id="gender1"></p><td>
+		</tr>
+		<tr>
+			<td><p id="location1"></p><td>
+		</tr>
+		<tr>	
+			<td><p id="email1"></p><td>
+		<tr>
+	</table>
+	</form>
+</body>
+</html>
